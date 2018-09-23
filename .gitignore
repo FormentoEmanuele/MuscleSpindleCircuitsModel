@@ -1,0 +1,7 @@
+.DS_Store
+neuralnetwork/code/x86_64
+neuralnetwork/code/x86_64/*
+*.pyc
+*.log
+neuralnetwork/code/tools/seedVal.txt
+results/*
