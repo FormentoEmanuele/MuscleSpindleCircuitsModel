@@ -24,6 +24,8 @@ def main():
 	This program can be executed both with and without MPI. In case MPI is used the cells
 	of the NeuralNetwork are shared between the different hosts in order to speed up the
 	simulation.
+
+	This script is run by the runBatchOfRecCurve.py script. 
 	"""
 
 	parser = argparse.ArgumentParser(description="Estimate the reflex responses induced by a range of stimulation amplitudes")

@@ -16,7 +16,7 @@ def main():
 	""" This program launches several static reflex recordings with different random seeds
 
 	Example of how to run this script from the terminal:
-	python scripts/runBatchOfRecCurve.py
+	python scripts/runBatchOfRecCurve.py 1 fsMnMod.txt test --mnReal --burstingEes
 	"""
 
 	parser = argparse.ArgumentParser(description="launch several static reflex recordings with different random seeds")
@@ -65,7 +65,7 @@ def main():
 	plot_rec_curve(args.nSim,figName,args.outFileName)
 
 def plot_rec_curve(nSimulations,figName,outFileName,showPlot=False):
-	""" Plots the averaged afferents firing rates. """
+	""" Plots the recruitment curves. """
 
 	mStat = []
 	mSpikes = []

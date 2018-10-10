@@ -12,8 +12,7 @@ class Motoneuron(Cell):
 	The model integrates an axon model developed by Richardson et al. 2000,
 	a model of the soma and of the dendritic tree developed by McIntyre 2002.
 	The geometry is scaled to match the rat dimension.
-	This model offers also the possibility to simulate the effect of 5-HT,
-	a compound that increase the cell excitability.
+	This model offers also the possibility to simulate the effect of 5-HT as in Booth et al. 1997.
 	"""
 	__eesWeight = 20 # Weight of a connection between an ees object and this cell
 
@@ -21,7 +20,7 @@ class Motoneuron(Cell):
 		""" Object initialization.
 
 		Keyword arguments:
-		drug -- A boolean flag that is used to decide whether the 5-HT drug is
+		drug -- A boolean flag that is used to decide whether 5-HT is
 		inserted in the model or not (default = True).
 		"""
 
@@ -33,7 +32,6 @@ class Motoneuron(Cell):
 		self._nNodes = 41
 		self._nDendrites = 12
 		self._diamAxon = 8.74
-		#random.normalvariate(8.74,2.25) but if r<8:r=8, we don't care to much about this
 
 		# dendrite diameters scaled for the rat
 		self._diamDend = [1.5277386855568675e+01, 1.7434194411648960e+01, 1.9770735930735935e+01,
@@ -73,9 +71,6 @@ class Motoneuron(Cell):
 		self.soma.Ra = 200
 		self.soma.insert('motoneuron') # Insert the Neuron motoneuron mechanism developed by McIntyre 2002
 		if self._drug: self.soma.gcak_motoneuron *= 0.6 # Add the drug effect as in Booth et al 1997
-
-		# if self._drug: self.soma.insert('motoneuron_5ht') # Add the drug effect as in Booth et al 1997
-		# else:self.soma.insert('motoneuron') # Insert the Neuron motoneuron mechanism developed by McIntyre 2002
 
 		self.initSegment.nseg = 5
 		self.initSegment.L = 1000

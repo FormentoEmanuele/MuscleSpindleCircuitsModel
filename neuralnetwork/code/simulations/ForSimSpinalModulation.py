@@ -21,7 +21,7 @@ rank = comm.Get_rank()
 
 class ForSimSpinalModulation(ForwardSimulation,CellsRecording):
 	""" Integration of a NeuralNetwork object over time given an input.
-	Cells membrane potential over time are the simulation result.
+		The simulation results are the cells membrane potential over time.
 	"""
 
 	def __init__(self, parallelContext, neuralNetwork, cells, modelType, afferentInput=None, eesObject=None, eesModulation=None, tStop = 100):

@@ -8,13 +8,13 @@ sizeComm = comm.Get_size()
 seedValFile = "tools/seedVal.txt"
 
 def save_seed(val):
-    """ saves val. Called once in simulation1.py """
+    """ saves seed val. """
     if rank == 0:
         with open(seedValFile, "wb") as f:
             f.write(str(int(val)))
 
 def load_seed():
-    """ loads val. Called by all scripts that need the shared seed value """
+    """ loads seed val. Called by all scripts that need the shared seed value. """
     seed = None
     if rank == 0:
         with open(seedValFile, "rb") as f:

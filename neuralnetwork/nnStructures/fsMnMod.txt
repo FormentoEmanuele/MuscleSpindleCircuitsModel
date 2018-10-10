@@ -3,7 +3,7 @@
 GM 16
 
 
-# [SECTION 2]: Common Cells per muscle: cellClass - name - number - required cell inputs (The name depend on the cell class; Motoneuron class - MnReal name, IntFireMn class - Mn name, AfferentFiber class - I... name for primary and II.. name for sencondary fibers, IntFire class - any name)
+# [SECTION 2]: Common Cells per muscle: cellClass - name - number - required cell inputs (The name depend on the cell class; Motoneuron class - MnReal name, IntFireMn class - Mn name, AfferentFiber class - I... name for primary and II.. name for secondary fibers, IntFire class - any name)
 @2
 Motoneuron MnReal 169
 AfferentFiber Iaf 60
@@ -13,8 +13,7 @@ AfferentFiber Iaf 60
 @3
 
 
-# [SECTION 4]: Common Network Connections, equal in each muscle: fromPopulation - toSingleCell - ratio - number - weight - typeOfSynapse (If toSingleCell is a real cell then typeOfSynapse can be either "inhibitory" or "excitatory", if toSingleCell is an artficialCell then typeOfSynapse has to be "artificial".)
-# Reminder: in ~rats from Harrison et al 1981 EPSP on MN due to Iaf is clearly related to the motor unit mechanical properties and he found that the EPSPs due to a single Iaf are: - 212uV for type S units - 126uV for type FR units - 52uV for type FF units. From Kanda et al 1992 the rat gastrocnemius is composed by: 17% of S types units, 48% of FR types units and 35% of FF types units. Assuming a dV of 8mv as threhsold for the Mn to fire (data coming from realisctic model) an epsp is about (2.65%,1.58%,0.65% - mean 1.4%) of the threhsold. To moltiply by 1.28 to mimick the heterogeneous contribution. While ex coming from the IIExInt is about 1/3 - mean is 0.014*60/116=.007. IPSP = -3mV ~ ].
+# [SECTION 4]: Common Network Connections, equal in each muscle: fromPopulation - toSingleCell - ratio - number - weight - typeOfSynapse (If toSingleCell is a real cell then typeOfSynapse can be either "inhibitory" or "excitatory", if toSingleCell is an artificialCell then typeOfSynapse has to be "artificial".)
 @4
 Iaf MnReal unique 60 0.047 excitatory
 

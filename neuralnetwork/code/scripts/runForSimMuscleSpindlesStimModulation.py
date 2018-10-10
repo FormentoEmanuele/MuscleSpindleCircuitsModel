@@ -16,7 +16,7 @@ sizeComm = comm.Get_size()
 rank = comm.Get_rank()
 
 def main():
-	""" This program launches a ForSimMuscleSpindles simulation with a predefined NeuralNetwork structure,
+	""" This program launches a ForSimMuscleSpindles simulation with a predefined NeuralNetwork structure and
 	senory-eencoding spatiotemporal EES profiles with amplitude and frequency given by the user as argument.
 
 	This program can be executed both with and without MPI. In case MPI is used the cells

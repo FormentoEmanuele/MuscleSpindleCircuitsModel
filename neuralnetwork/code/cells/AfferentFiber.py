@@ -23,12 +23,8 @@ class AfferentFiber(Cell):
 	simulate the progation of the APs and the collision of natural and EES
 	induced spikes. A refracory period of mean 1.6 ms and std of 0.16 ms is modeled.
 	Note that the __updatePeriod can be incresaed in order to speed up the
-	simulations. However, by increasing this value we would also loose resolution
+	simulations. However, by increasing this value we would also lose resolution
 	of the refractory period.
-	For a simpler model with an implicit refractory period of 1 ms use
-	AfferentFiberSimple. Be aware that in some simulations the integration step
-	is linked to the __updatePeriod of this class. To use the other model you
-	need to modify this.
 	"""
 
 	__updatePeriod = 0.1 # Time period in ms between calls of the update fcn

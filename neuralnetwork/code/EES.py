@@ -256,7 +256,7 @@ class EES():
 	def get_amplitude(self,printFlag=False):
 		""" Return the stimulation amplitude and print it to screen.
 
-		Current bug: if set_amplitude was used with the non default 'muscles' parameter,
+		If set_amplitude was used with the non default 'muscles' parameter,
 		the stimulation amplitude here returned is not valid for the whole network.
 		Indeed, this function only returns the most recent amplitude value that was used
 		to change the stimulation settings. """

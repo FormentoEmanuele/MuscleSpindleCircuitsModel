@@ -27,9 +27,9 @@ class ForwardSimulation(Simulation):
 		neuralNetwork -- NeuralNetwork object.
 		afferentInput -- Dictionary of lists for each type of fiber containing the
 			fibers firing rate over time and the dt at wich the firing rate is updated.
-			If no afferent input is desired use None (default = None).
-		eesObject -- EES object connected to the NeuralNetwork, usefull for some plotting
-			info and mandatory for eesModulation (Default = None).
+			If no afferent input is desired, use None (default = None).
+		eesObject -- EES object connected to the NeuralNetwork,
+			mandatory for eesModulation (Default = None).
 		eesModulation -- possible dictionary with the following strucuture: {'modulation':
 			dictionary containing a	signal of 0 and 1s used to activate/inactivate
 			the stimulation for every muscle that we want to modulate (the dictionary

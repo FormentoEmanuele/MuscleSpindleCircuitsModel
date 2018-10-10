@@ -17,7 +17,7 @@ def main():
 
 	Example of how to run this script from the terminal:
 	python scripts/runCollisionEesNatural.py
-	mpiexec -np 50 scripts/runCollisionEesNatural.py
+	mpiexec -np 10 python scripts/runCollisionEesNatural.py
 	"""
 
 	parser = argparse.ArgumentParser(description="Compute the probability of antidromic collisions")

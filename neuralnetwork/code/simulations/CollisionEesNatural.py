@@ -18,7 +18,7 @@ rank = comm.Get_rank()
 
 class CollisionEesNatural(Simulation):
 	""" Simulation to evaluate the effect of EES on the natural firing rate in function of the fiber
-	legnth, of its firing rate and of the frequency of stimulation.
+	legnth, of its firing rate and of the stimulation frequency.
 	"""
 
 	def __init__(self, parallelContext, eesFrequencies, fiberDelays, fiberFiringRates, segmentToRecord = None, tstop = 5000):
@@ -29,6 +29,8 @@ class CollisionEesNatural(Simulation):
 		eesFrequencies -- List of stimulation frequencies to test.
 		fiberDelays -- List of fiber delays to test.
 		fiberFiringRates -- List of fiber firing rates to test.
+		segmentToRecord -- Segment to record in case of a real afferent fiber model (default = None).
+		tstop -- Time in ms at wich the simulation will stop (default = 500).
 		"""
 
 		Simulation.__init__(self,parallelContext)

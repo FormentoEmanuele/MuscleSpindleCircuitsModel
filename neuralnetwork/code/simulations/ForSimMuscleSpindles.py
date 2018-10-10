@@ -18,7 +18,7 @@ rank = comm.Get_rank()
 
 class ForSimMuscleSpindles(ForwardSimulation):
 	""" Integration of a NeuralNetwork object of two antagonist muscles over time given an input.
-		muscle EMGs and neural firing rates are the results extracted at the end of simulation.
+		Muscle EMGs and neural firing rates are the results extracted at the end of simulation.
 	"""
 
 	def plot(self,flexorMuscle,extensorMuscle,name="",showFig=True):
@@ -36,7 +36,6 @@ class ForSimMuscleSpindles(ForwardSimulation):
 		meanPerEraserApIaf = np.mean([meanPercErasedApFlexIaf,meanPercErasedApExtIaf])
 		meanPerEraserApIIf = np.mean([meanPercErasedApFlexIIf,meanPercErasedApExtIIf])
 
-		#should be on rank 0?
 		if not self._ees == None:
 			percFiberActEes = self._ees.get_amplitude()
 			title = 'EES _ {0:.0f}uA _ {1:.0f}Hz _ Delay _ {2:.0f}ms '.format(percFiberActEes[0],self._ees.get_frequency(),\
